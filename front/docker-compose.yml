@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  secure_by_design_front:
+    image: node:16-alpine
+    container_name: secure_by_design_front
+    user: 1000:1000
+    working_dir: "/app"
+    ports:
+      - 3000:3000
+      - 4173:4173
+    volumes:
+      - .:/app
